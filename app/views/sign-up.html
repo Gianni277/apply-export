@@ -18,7 +18,7 @@
   <h1 class="govuk-heading-xl">
     Has anyone else from the organisation already set up an account?
   </h1>
-  <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+  <div class="govuk-radios govuk-radios" data-module="govuk-radios">
     <div class="govuk-radios__item">
       <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
       <label class="govuk-label govuk-radios__label" for="changed-name">
@@ -27,8 +27,14 @@
     </div>
     <div class="govuk-radios__item">
       <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-      <label class="govuk-label govuk-radios__label" for="changed-name-2">
+      <label class="govuk-label govuk-radios__label" for="changed-name">
         No
+      </label>
+    </div>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="changed-name-3" name="changed-name" type="radio" value="no">
+      <label class="govuk-label govuk-radios__label" for="changed-name-3">
+        I don't know
       </label>
     </div>
   </div>
@@ -37,7 +43,7 @@
   </div>
   {{ govukButton({
     text: "Continue",
-    href: "#",
+    href: "",
     attributes: {
       "data-action": "form-submit",
       "data-submitting-text": "Submitting...",
@@ -51,11 +57,14 @@
   function handleSignIn() {
     const yesRadio = document.getElementById("changed-name");
     const noRadio = document.getElementById("changed-name-2");
+    const dontKnowRadio = document.getElementById("changed-name-3"); // Add this line
 
     if (yesRadio.checked) {
       window.location.href = "get-account";  // URL for "Yes" option
     } else if (noRadio.checked) {
       window.location.href = "/name-of-org";  // URL for "No" option
+    } else if (dontKnowRadio.checked) { // Add this else if block
+      window.location.href = "/name-of-org";  // URL for "I don't know" option
     }
 
     return false;  // Prevent form submission
