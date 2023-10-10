@@ -25,12 +25,10 @@
       id: "destination-country",
       name: "destination-country",
       label: {
-        text: "Choose the destination country",
+        text: "Where are you sending the goods? ",
         classes: "govuk-label--m"
       },
-      hint: {
-        text: "The country you're exporting to"
-      },
+    
       items: [
         {
           value: "choose",
@@ -84,11 +82,8 @@
       id: "certificate-type",
       name: "certificate-type",
       label: {
-        text: "Choose the certificate type",
+        text: "Which export certificate do you need?",
         classes: "govuk-label--m"
-      },
-      hint: {
-        text: "The export document you're applying for"
       },
       items: [
         {
@@ -110,6 +105,16 @@
         }
       ]
     }) }}
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with certificate types
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Read about the <a href="/paths-2">different types of export certificates</a> offered by the Department for Business and Trade (DBT).
+      </div>
+    </details>
 
     <div id="goods-type-section" hidden>
       <!-- Update the ID for the goods type select to 'goods-type' -->
