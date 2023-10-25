@@ -28,11 +28,16 @@
     }
   </style>
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-label-wrapper">
+      <label class="govuk-label govuk-label--l" for="event-name">
         Enter your email address
-      </h1>
+      </label>
+    </h1>
+    <div id="address-line-1-hint" class="govuk-hint">
+      Don't have an account? <a href="onegov-new">Create an account.</a>
+      </div>
       <form class="form" action="/path/of/next/page" method="post">
         <fieldset class="govuk-fieldset">
           <div class="govuk-form-group">
