@@ -31,12 +31,18 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">
-        Check your phone
+        Check your email
       </h1>
      
       <div class="govuk-inset-text">
-        We have sent a code to your phone number ending with <b>136</b>
+        We have sent an email to: <b>example@email.com</b>
       </div>
+
+      <p>The email contains a 6 digit security code.</p>
+
+      <p>Your email might take a few minutes to arrive. If you do not get an emal, check your spam folder.</p>
+
+      <p>The code will expire after 2 hours.</p>
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="width-10">
@@ -60,7 +66,7 @@
           }
         </script>
 
-<a href="/orgs-list-view" class="govuk-button" data-module="govuk-button">
+<a href="reset-password" class="govuk-button" data-module="govuk-button">
   Continue
 </a>
 
@@ -72,7 +78,7 @@
     </span>
   </summary>
   <div class="govuk-details__text">
-    We can  <a href="check-email-sign-up">send the code again</a> if the code is not working or you did not receive it.
+    We can send the code again if the code is not working or you did not receive it.
   </div>
 </details>
 {% endblock %}
