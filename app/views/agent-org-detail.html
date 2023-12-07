@@ -38,7 +38,11 @@
         href: "manage-account"
       },
       {
-        text: "David Francis"
+        text: "Agents",
+        href: "manage-account#agents"
+      },
+      {
+        text: "Lyle agency"
       }
     ]
   }) }}
@@ -47,13 +51,13 @@
 
 
 {% block content %}
-<h2 class="govuk-heading-l">David Francis
+<h2 class="govuk-heading-l">Lyle agency
 </h2>
 <table class="govuk-table">
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Job title</th>
-      <td class="govuk-table__cell">Account Executive</td>
+      <th scope="col" class="govuk-table__header">Registered number</th>
+      <td class="govuk-table__cell">422</td>
       <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Edit</a></td>
     </tr>
   </thead>
@@ -63,23 +67,23 @@
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--turquoise">
         ACTIVE
       </strong></td>
-      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="/deactivate-user">Remove</a></td>
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="/delete-agent">Archive</a></td>
     </tr>
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><b>Permissions</b></td>
-      <td class="govuk-table__cell">View applications and certificates
+      <td class="govuk-table__cell"><b>Offices</b></td>
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Agent Org HQ</a>
+        <br>
+        <a class="govuk-link govuk-link--no-visited-state" href="#">Agent Org Midlands</a>
       </td>
-      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="assign-office">Edit</a></td>
-    </tr>
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Add an office</a></td>
+    </tr> 
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><b>Email</b></td>
-      <td class="govuk-table__cell">d.francis@acme.com</td>
-      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Edit</a></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell"><b>Telephone number</b></td>
-      <td class="govuk-table__cell">07700 900 982</td>
-      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Edit</a></td>
+      <td class="govuk-table__cell"><b>Agents</b></td>
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="#">Daniel Craig</a>
+        <br>
+        <a class="govuk-link govuk-link--no-visited-state" href="#">Nina Simone</a>
+      </td>
+      <td class="govuk-table__cell"><a class="govuk-link govuk-link--no-visited-state" href="add-agent-info">Add an agent</a></td>
     </tr>
   </tbody>
 </table>

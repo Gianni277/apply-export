@@ -36,12 +36,17 @@
       {
         text: "Account",
         href: "manage-account"
-      },  {
-        text: "David Francis",
-        href: "user-details"
       },
       {
-        text: "Remove"
+        text: "Agents",
+        href: "manage-account#agents"
+      },
+      {
+        text: "Lyle agency",
+        href: "agent-org-detail"
+      },
+      {
+        text: "Archive"
       }
     ]
   }) }}
@@ -53,16 +58,16 @@
 
 <div class="govuk-form-group">
   <h1 class="govuk-heading-l">
-    Are you sure you want to remove this contact?
+    Are you sure you want to archive Lyle agency?
   </h1>
 
   <label class="govuk-label" for="sort">
-    This contact will no longer be able to do xyz.
+    The agents attached to Lyle agency will no longer be able to submit applications on your behalf.
   </label>
   <br>
   <div class="govuk-button-group">
-    <a class="govuk-button govuk-button--warning" data-module="govuk-button" href="/manage-account">
-      Remove contact
+    <a class="govuk-button govuk-button--warning" data-module="govuk-button" href="manage-account#agents">
+      Archive
     </a>  
     <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="/user-details">
       Cancel

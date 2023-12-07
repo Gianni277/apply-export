@@ -45,20 +45,14 @@
     <h1 class="govuk-heading-xl">
       Review your answers
     </h1>
-
-    <h2 class="govuk-heading-m">
-      Your invite
-    </h2>
    
-
-
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Contact type
+          Organisation name
         </dt>
         <dd class="govuk-summary-list__value">
-          Agent
+          Agent Org IV
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">
@@ -68,10 +62,10 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Contact's name
+          Registered number
         </dt>
         <dd class="govuk-summary-list__value">
-          Tobi Okocha
+          2456
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">
@@ -81,23 +75,20 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Contact's email
+          Organisation
         </dt>
         <dd class="govuk-summary-list__value">
-          t.okocha@email.com
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">
-            Change<span class="govuk-visually-hidden"> name</span>
-          </a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Agent organisation
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Lyle agency
+          Agent Org IV HQ
+          <br>
+          Zebra building
+          <br>
+          71 Park Lane
+          <br>
+          Telford
+          <br>
+          United Kingdom
+          <br>
+          TF40 2VX
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#">
@@ -108,18 +99,17 @@
     </dl>
 <br>
     <h2 class="govuk-heading-m">
-      Now send your invite
+      Now submit your form
     </h2>
    
     <p>
-        The invite will give the user access to your organisation's account. Make sure that this user already has a One Login account linked to the email above.
-    </p>
+        This form will create an agent organisation. Once your agent organisation is created, you will be able to add individual agents to it.
   </div>
 </div>
   <br>
   {{ govukButton({
-    text: "Confirm and submit invite",
-    href: "agent-invite-sent",
+    text: "Confirm and submit",
+    href: "agent-org-form-submitted",
     attributes: {
       "data-action": "form-submit",
       "data-submitting-text": "Submitting...",

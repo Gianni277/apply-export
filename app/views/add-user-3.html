@@ -35,7 +35,7 @@
     items: [
       {
         text: "Account",
-        href: "manage-account"
+        href: "manage-account#agents"
       },
       {
         text: "Add a contact"
@@ -49,27 +49,27 @@
 
 <div class="govuk-form-group">
   <h1 class="govuk-heading-xl">
-    Who do you want to add?
+    What do you want to do?
   </h1>
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
-        <label class="govuk-label govuk-radios__label" for="sign-in-2">
-         An exporter
-        </label>
-        <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
-          Exporters can make and submit export applications.
-        </div>
-      </div>
       <div class="govuk-radios" data-module="govuk-radios">
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
           <label class="govuk-label govuk-radios__label" for="sign-in">
-            An agent
+            Create an agent organisation
           </label>
           <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
-            Agents can make and submit applications on your behalf
+          Agent organisations allow you to add individual agents to your account
+          </div>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+          <label class="govuk-label govuk-radios__label" for="sign-in-2">
+           Invite an individual agent
+          </label>
+          <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+            Add an individual agent to an agent organisations
           </div>
         </div>
       </div>
@@ -95,9 +95,9 @@
     const individualRadio = document.getElementById("sign-in-2");
 
     if (organizationRadio.checked) {
-      window.location.href = "/add-user-3";  // URL for the "Organization" option
+      window.location.href = "/add-agent";  // URL for the "Organization" option
     } else if (individualRadio.checked) {
-      window.location.href = "/add-exporter";  // URL for the "Private Individual" option
+      window.location.href = "choose-agent-org";  // URL for the "Private Individual" option
     } else if (individualRadio.checked) {
       window.location.href = "individual-already-here";  // URL for the "Private Individual" option
     }
