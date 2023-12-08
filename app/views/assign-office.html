@@ -29,27 +29,6 @@
 }) }}
 {% endblock %}
 
-{% block beforeContent %}
-
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Account",
-        href: "manage-account"
-      },
-      {
-        text: "David Francis",
-        href: "user-details"
-      },
-      {
-        text: "Permissions"
-      }
-    ]
-  }) }}
-
-{% endblock %}
-
-
 {% block content %}
 
 <div class="govuk-form-group">
@@ -100,19 +79,44 @@
   <br>
   {{ govukButton({
     text: "Save",
-    href: "/user-details-updated",
     attributes: {
       "data-action": "form-submit",
       "data-submitting-text": "Submitting...",
       "data-prevent-double-click": "true",
-      "onclick": "return handleSignIn();"
+      "onclick": "return handleSave();"
     }
   }) }}
 
 </div>
 
+<script>
+  function handleSave() {
+    const checkboxes = document.querySelectorAll('input[name="nationality"]:checked');
+    const numChecked = checkboxes.length;
 
+    switch (numChecked) {
+      case 0:
+        window.location.href = "/user-details-no-perm";
+        break;
+      case 1:
+        window.location.href = "/user-details-updated-one";
+        break;
+      case 2:
+        window.location.href = "/user-details-updated-two";
+        break;
+      case 3:
+        window.location.href = "/user-details-updated";
+        break;
+      default:
+        // Handle the default case here (if necessary)
+        break;
+    }
+
+    return false; // Prevent form submission
+  }
+</script>
 
 {% endblock %}
+
 
 
